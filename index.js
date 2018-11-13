@@ -33,7 +33,7 @@ app.post('/', (req, res, next) => {
     status = status.replace(dndToken, '');
   };
   
-  if(status.includes("lunch")) {
+  if(status.includes('lunch')) {
      status_emoji = ':burrito:';
    } else {
      status_emoji = ':calendar:';
