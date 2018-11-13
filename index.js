@@ -18,7 +18,7 @@ app.post('/', (req, res, next) => {
   if (!req.body.token || req.body.token !== process.env.SECRET_TOKEN) next();
   // grab status and clean it up
   let status = req.body.title;
-  let status_emoji = ":thumbsup:";
+  let status_emoji = ':thumbsup:';
   const dndToken = ' [DND]';
   // parse event start/stop time
   const dateFormat = 'MMM D, YYYY [at] hh:mmA';
@@ -34,9 +34,9 @@ app.post('/', (req, res, next) => {
   };
   
   if(status.includes("lunch")) {
-     status_emoji = ':burrito:'
+     status_emoji = ':burrito:';
    } else {
-     status_emoji = ':calendar:'
+     status_emoji = ':calendar:';
    }
  
   // set status
