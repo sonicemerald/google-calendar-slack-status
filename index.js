@@ -45,7 +45,7 @@ app.post('/', (req, res, next) => {
     profile: JSON.stringify({
       "status_text": `${status} from ${start.format('h:mm')} to ${end.format('h:mm a')} ${process.env.TIME_ZONE}`,
       "status_emoji": status_emoji,
-      "status_expiration": end.unix()
+      "status_expiration": ${end.unix()}
     })
   });
   res.status(200);
